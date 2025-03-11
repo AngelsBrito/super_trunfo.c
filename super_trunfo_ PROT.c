@@ -16,15 +16,11 @@ int main(){
     int populacao2;
     int numerosP1;
     int numerosP2;
+    int resultPOPU, resultAREA, resultPIB, resultDENSP, resultNUMP, resultPIBPC, resultSUPER;
 
-    float area2;
-    float area1;
-    float pib2;
-    float pib1;
-    float densidadeP2;
-    float densidadeP1;
-    float pibPC1;
-    float pibPC2;
+    float area2, pib2, densidadeP2, pibPC2, superP2;
+    float area1, pib1, densidadeP1, pibPC1, superP1;
+    
 
     /*
         **Exemplos usados para teste**
@@ -128,8 +124,10 @@ int main(){
     printf("Densidade Populacional: %.2f hab/Km²\n", densidadeP1);
 
     printf("PIB per Capita: %.2f reais\n", pibPC1);
-    
-    
+
+    superP1 = (float) populacao1 + area1 + pib1 + numerosP1 + pibPC1 + (densidadeP1 / 1);
+
+    printf("Super Poder: %.2f\n", superP1);
 
     printf("---------------------------------------------------------------------------------\n");
     printf("Carta 2: \n");
@@ -155,6 +153,48 @@ int main(){
     printf("Densidade Populacional: %.2f hab/Km²\n", densidadeP2);
 
     printf("PIB per Capita: %.2f reais\n", pibPC2);
+
+    superP2 = (float) populacao2 + area2 + pib2 + numerosP2 + pibPC2 + (densidadeP2 / 1);
+
+    printf("Super Poder: %.2f\n", superP2);
+
+
+
+    printf("---------------------------------------------------------------------------------\n");
+    printf(" *** DUELO ***\n");
+
+    printf("A carta 1 tem maior População que a carta 2?: %d\n", populacao1 > populacao2);
+
+    printf("A carta 1 tem maior Área que a carta 2?: %d\n", area1 > area2);
+
+    printf("A carta 1 tem maior PIB que a carta 2?: %d\n", pib1 > pib2);
+
+    printf("A carta 1 tem mais Pontos Turísticos que a carta 2?: %d\n", numerosP1 > numerosP2);
+
+    printf("A carta 1 tem maior Densidade Populacional que a carta 2?: %d\n", densidadeP1 > densidadeP2);
+
+    printf("A carta 1 tem maior PIB per Capita que a carta 2?: %d\n", pibPC1 > pibPC2);
+
+    printf("A carta 1 tem  um maior Super Poder que a carta 2?: %d\n", superP1 > superP2);
+
+    printf("---------------------------------------------------------------------------------\n");
+    printf("*** RESULTADO ***\n");
+
+    resultPOPU = populacao1 > populacao2;
+    resultAREA = area1 > area2;
+    resultPIB = pib1 > pib2;
+    resultNUMP = numerosP1 > numerosP2;
+    resultDENSP = densidadeP1 > densidadeP2;
+    resultPIBPC = pibPC1 > pibPC2;
+    resultSUPER = superP1 > superP2;
+
+    printf("População: %d\n", resultPOPU);
+    printf("Área: %d\n", resultAREA);
+    printf("PIB: %d\n", resultPIB);
+    printf("Pontos Turísticos: %d\n", resultNUMP);
+    printf("Densidade Populacional: %d\n", resultDENSP);
+    printf("PIB per Capita: %d\n", resultPIBPC);
+    printf("Super Poder: %d\n", resultSUPER);
 
     return 0;
 
