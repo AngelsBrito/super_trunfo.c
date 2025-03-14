@@ -163,39 +163,100 @@ int main(){
     printf("---------------------------------------------------------------------------------\n");
     printf(" *** DUELO ***\n");
 
-    printf("A carta 1 tem maior População que a carta 2?: %d\n", populacao1 > populacao2);
+    printf("Maior população: ");
+    if (populacao1 > populacao2) {
+        printf("Carta 1 - %s: %d\n", nomeC1, populacao1);
+    } else {
+        printf("Carta 2 - %s: %d\n", nomeC2, populacao2);
+    }
 
-    printf("A carta 1 tem maior Área que a carta 2?: %d\n", area1 > area2);
+    printf("Maior área: ");
+    if (area1 > area2) {
+        printf("Carta 1 - %s: %.2f Km²\n", nomeC1, area1);
+    } else {
+        printf("Carta 2 - %s: %.2f Km²\n", nomeC2, area2);
+    }
 
-    printf("A carta 1 tem maior PIB que a carta 2?: %d\n", pib1 > pib2);
+    printf("Maior PIB: ");
+    if (pib1 > pib2) {
+        printf("Carta 1 - %s: %.2f bilhões\n", nomeC1, pib1);
+    } else {
+        printf("Carta 2 - %s: %.2f bilhões\n", nomeC2, pib2);
+    }
 
-    printf("A carta 1 tem mais Pontos Turísticos que a carta 2?: %d\n", numerosP1 > numerosP2);
+    printf("Mais pontos turísticos: ");
+    if (numerosP1 > numerosP2) {
+        printf("Carta 1 - %s: %d\n", nomeC1, numerosP1);
+    } else {
+        printf("Carta 2 - %s: %d\n", nomeC2, numerosP2);
+    }
 
-    printf("A carta 1 tem maior Densidade Populacional que a carta 2?: %d\n", densidadeP1 > densidadeP2);
+    printf("Menor densidade populacional: ");
+    if (densidadeP1 < densidadeP2) {
+        printf("Carta 1 - %s: %.2f hab/Km²\n", nomeC1,densidadeP1);
+    } else {
+        printf("Carta 2 - %s: %.2f hab/Km²\n", nomeC2, densidadeP2);
+    }
 
-    printf("A carta 1 tem maior PIB per Capita que a carta 2?: %d\n", pibPC1 > pibPC2);
+    printf("Maior PIB per capta: ");
+    if (pibPC1 > pibPC2) {
+        printf("Carta 1 - %s: %.2f reais\n", nomeC1, pibPC1);
+    } else {
+        printf("Carta 2 - %s: %.2f reais\n", nomeC2, pibPC2);
+    }
 
-    printf("A carta 1 tem  um maior Super Poder que a carta 2?: %d\n", superP1 > superP2);
+    printf("Maior super poder: ");
+    if (superP1 > superP2) {
+        printf("Carta 1 - %s: %.2f\n", nomeC1, superP1);
+    } else {
+        printf("Carta 2 - %s: %.2f\n", nomeC2, superP2);
+    }
 
     printf("---------------------------------------------------------------------------------\n");
     printf("*** RESULTADO ***\n");
 
-    resultPOPU = populacao1 > populacao2;
-    resultAREA = area1 > area2;
-    resultPIB = pib1 > pib2;
-    resultNUMP = numerosP1 > numerosP2;
-    resultDENSP = densidadeP1 > densidadeP2;
-    resultPIBPC = pibPC1 > pibPC2;
-    resultSUPER = superP1 > superP2;
-
-    printf("População: %d\n", resultPOPU);
-    printf("Área: %d\n", resultAREA);
-    printf("PIB: %d\n", resultPIB);
-    printf("Pontos Turísticos: %d\n", resultNUMP);
-    printf("Densidade Populacional: %d\n", resultDENSP);
-    printf("PIB per Capita: %d\n", resultPIBPC);
-    printf("Super Poder: %d\n", resultSUPER);
-
+    printf("População: " );
+    if (populacao1 > populacao2) {
+        printf("Carta 1 venceu!\n");
+    } else {
+        printf("Carta 2 venceu!\n");
+    }
+    printf("Área: ");
+    if (area1 > area2) {
+        printf("Carta 1 venceu!\n");
+    } else {
+        printf("Carta 2 venceu!\n");
+    }
+    printf("PIB: ");
+    if (pib1 > pib2) {
+        printf("Carta 1 venceu!\n");
+    } else {
+        printf("Carta 2 venceu!\n");
+    }
+    printf("Pontos Turísticos: ");
+    if (numerosP1 > numerosP2) {
+        printf("Carta 1 venceu!\n");
+    } else {
+        printf("Carta 2 venceu!\n");
+    }
+    printf("Densidade Populacional: ");
+    if (densidadeP1 < densidadeP2) {
+        printf("Carta 1 venceu!\n");
+    } else {
+        printf("Carta 2 venceu!\n");
+    }
+    printf("PIB per Capita: ");
+    if (pibPC1 > pibPC2) {
+        printf("Carta 1 venceu!\n");
+    } else {
+        printf("Carta 2 venceu!\n");
+    }
+    printf("Super Poder: ");
+    if (superP1 > superP2) {
+        printf("Carta 1 venceu!\n");
+    } else {
+        printf("Carta 2 venceu!\n");
+    }
     return 0;
 
-}
+    }
